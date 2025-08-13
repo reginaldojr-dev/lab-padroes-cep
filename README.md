@@ -121,7 +121,6 @@ Imagens em `docs/img/`:
 7. `07-cliente-get.png` — GET /clientes/{id} lendo o cliente persistido.  
 8. `08-h2-cliente.png` — Consulta no H2 mostrando dados do cliente.
 
-> Se desejar, inclua também prints do cache (ex.: headers `X-Cache: MISS/HIT`) — opcional para a avaliação.
 
 ---
 
