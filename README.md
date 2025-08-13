@@ -110,21 +110,45 @@ Resposta: `201 Created` com o cliente e endereço vinculado.
 
 ## Evidências (prints)
 
-![Estrutura do projeto](docs/img/01-estrutura.png)
+<figure>
+  <img src="docs/img/01-estrutura.png" alt="Estrutura do projeto no IntelliJ" width="900">
+  <figcaption><b>01 — Estrutura do projeto</b>: pacotes controller, service, repo, model, provider (Strategy) e dto, além da classe Application (Facade visível nos controllers).</figcaption>
+</figure>
 
-![Swagger UI](docs/img/02-swagger-home.png)
+<figure>
+  <img src="docs/img/02-swagger-home.png" alt="Swagger UI com os endpoints" width="900">
+  <figcaption><b>02 — Swagger UI</b>: documentação automática dos endpoints /enderecos e /clientes.</figcaption>
+</figure>
 
-![CEP via ViaCEP](docs/img/03-endereco-viacep.png)
+<figure>
+  <img src="docs/img/03-endereco-viacep.png" alt="GET /enderecos/{cep} com source=viacep" width="900">
+  <figcaption><b>03 — CEP resolvido</b>: GET /enderecos/… atendido pelo ViaCEP (campo <code>source</code> = <code>viacep</code>).</figcaption>
+</figure>
 
-![Fallback para BrasilAPI](docs/img/04-endereco-fallback-brasilapi.png)
+<figure>
+  <img src="docs/img/04-endereco-fallback-brasilapi.png" alt="Fallback para BrasilAPI com source=brasilapi" width="900">
+  <figcaption><b>04 — Fallback</b>: ViaCEP indisponível → BrasilAPI assume (campo <code>source</code> = <code>brasilapi</code>).</figcaption>
+</figure>
 
-![Ordem dos Providers (@Order)](docs/img/05-order-providers.png)
+<figure>
+  <img src="docs/img/05-order-providers.png" alt="Ordem dos providers com @Order" width="900">
+  <figcaption><b>05 — Strategy (ordem)</b>: prioridade dos provedores definida por <code>@Order</code> (ViaCEP &gt; BrasilAPI &gt; Mock).</figcaption>
+</figure>
 
-![Criação de Cliente (POST /clientes)](docs/img/06-cliente-create.png)
+<figure>
+  <img src="docs/img/06-cliente-create.png" alt="POST /clientes criando cliente" width="900">
+  <figcaption><b>06 — Criar cliente</b>: POST /clientes com enriquecimento de endereço por CEP.</figcaption>
+</figure>
 
-![Busca de Cliente (GET /clientes/{id})](docs/img/07-cliente-get.png)
+<figure>
+  <img src="docs/img/07-cliente-get.png" alt="GET /clientes/{id} retornando cliente" width="900">
+  <figcaption><b>07 — Consultar cliente</b>: GET /clientes/{id} mostrando persistência e relacionamento com endereço.</figcaption>
+</figure>
 
-![H2 – Tabela CLIENTE](docs/img/08-h2-cliente.png)
+<figure>
+  <img src="docs/img/08-h2-cliente.png" alt="Consulta no H2: tabela CLIENTE" width="900">
+  <figcaption><b>08 — H2</b>: dados do cliente na tabela <code>CLIENTE</code> (FK para <code>ENDERECO</code>).</figcaption>
+</figure>
 
 
 ---
