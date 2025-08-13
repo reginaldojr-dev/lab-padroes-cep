@@ -110,45 +110,37 @@ Resposta: `201 Created` com o cliente e endereço vinculado.
 
 ## Evidências (prints)
 
-<figure>
-  <img src="docs/img/01-estrutura.png" alt="Estrutura do projeto no IntelliJ" width="900">
-  <figcaption><b>01 — Estrutura do projeto</b>: pacotes controller, service, repo, model, provider (Strategy) e dto, além da classe Application (Facade visível nos controllers).</figcaption>
-</figure>
+<h3 align="left">01 — Estrutura do projeto</h3>
+<p>Pacotes controller, service, repo, model, provider (Strategy) e dto.</p>
+<p align="center"><img src="docs/img/01-estrutura.png" width="900" /></p>
 
-<figure>
-  <img src="docs/img/02-swagger-home.png" alt="Swagger UI com os endpoints" width="900">
-  <figcaption><b>02 — Swagger UI</b>: documentação automática dos endpoints /enderecos e /clientes.</figcaption>
-</figure>
+<h3 align="left">02 — Swagger UI</h3>
+<p>Documentação automática dos endpoints /enderecos e /clientes.</p>
+<p align="center"><img src="docs/img/02-swagger-home.png" width="900" /></p>
 
-<figure>
-  <img src="docs/img/03-endereco-viacep.png" alt="GET /enderecos/{cep} com source=viacep" width="900">
-  <figcaption><b>03 — CEP resolvido</b>: GET /enderecos/… atendido pelo ViaCEP (campo <code>source</code> = <code>viacep</code>).</figcaption>
-</figure>
+<h3 align="left">03 — CEP resolvido (ViaCEP)</h3>
+<p>GET /enderecos/{cep} com <code>source=viacep</code>.</p>
+<p align="center"><img src="docs/img/03-endereco-viacep.png" width="900" /></p>
 
-<figure>
-  <img src="docs/img/04-endereco-fallback-brasilapi.png" alt="Fallback para BrasilAPI com source=brasilapi" width="900">
-  <figcaption><b>04 — Fallback</b>: ViaCEP indisponível → BrasilAPI assume (campo <code>source</code> = <code>brasilapi</code>).</figcaption>
-</figure>
+<h3 align="left">04 — Fallback (BrasilAPI)</h3>
+<p>ViaCEP indisponível → BrasilAPI atende (<code>source=brasilapi</code>).</p>
+<p align="center"><img src="docs/img/04-endereco-fallback-brasilapi.png" width="900" /></p>
 
-<figure>
-  <img src="docs/img/05-order-providers.png" alt="Ordem dos providers com @Order" width="900">
-  <figcaption><b>05 — Strategy (ordem)</b>: prioridade dos provedores definida por <code>@Order</code> (ViaCEP &gt; BrasilAPI &gt; Mock).</figcaption>
-</figure>
+<h3 align="left">05 — Strategy (ordem via @Order)</h3>
+<p>Prioridade: ViaCEP &gt; BrasilAPI &gt; Mock.</p>
+<p align="center"><img src="docs/img/05-order-providers.png" width="900" /></p>
 
-<figure>
-  <img src="docs/img/06-cliente-create.png" alt="POST /clientes criando cliente" width="900">
-  <figcaption><b>06 — Criar cliente</b>: POST /clientes com enriquecimento de endereço por CEP.</figcaption>
-</figure>
+<h3 align="left">06 — Criar cliente (POST /clientes)</h3>
+<p>Enriquecimento de endereço por CEP.</p>
+<p align="center"><img src="docs/img/06-cliente-create.png" width="900" /></p>
 
-<figure>
-  <img src="docs/img/07-cliente-get.png" alt="GET /clientes/{id} retornando cliente" width="900">
-  <figcaption><b>07 — Consultar cliente</b>: GET /clientes/{id} mostrando persistência e relacionamento com endereço.</figcaption>
-</figure>
+<h3 align="left">07 — Buscar cliente (GET /clientes/{id})</h3>
+<p>Cliente persistido com endereço vinculado.</p>
+<p align="center"><img src="docs/img/07-cliente-get.png" width="900" /></p>
 
-<figure>
-  <img src="docs/img/08-h2-cliente.png" alt="Consulta no H2: tabela CLIENTE" width="900">
-  <figcaption><b>08 — H2</b>: dados do cliente na tabela <code>CLIENTE</code> (FK para <code>ENDERECO</code>).</figcaption>
-</figure>
+<h3 align="left">08 — H2: tabela CLIENTE</h3>
+<p>Consulta no H2 mostrando dados do cliente.</p>
+<p align="center"><img src="docs/img/08-h2-cliente.png" width="900" /></p>
 
 
 ---
