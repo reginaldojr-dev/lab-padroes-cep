@@ -110,16 +110,21 @@ Resposta: `201 Created` com o cliente e endereço vinculado.
 
 ## Evidências (prints)
 
-Imagens em `docs/img/`:
+![Estrutura do projeto](docs/img/01-estrutura.png)
 
-1. `01-estrutura.png` — Estrutura do projeto (packages controller/service/repo/model/provider/dto).  
-2. `02-swagger-home.png` — Swagger UI aberto com os endpoints (Facade).  
-3. `03-endereco-viacep.png` — GET /enderecos/{cep} resolvido pelo ViaCEP (`source=viacep`).  
-4. `04-endereco-fallback-brasilapi.png` — ViaCEP indisponível; fallback para BrasilAPI (`source=brasilapi`).  
-5. `05-order-providers.png` — Código mostrando a ordem de prioridade via `@Order` (Strategy + fallback).  
-6. `06-cliente-create.png` — POST /clientes criando cliente com enriquecimento de endereço.  
-7. `07-cliente-get.png` — GET /clientes/{id} lendo o cliente persistido.  
-8. `08-h2-cliente.png` — Consulta no H2 mostrando dados do cliente.
+![Swagger UI](docs/img/02-swagger-home.png)
+
+![CEP via ViaCEP](docs/img/03-endereco-viacep.png)
+
+![Fallback para BrasilAPI](docs/img/04-endereco-fallback-brasilapi.png)
+
+![Ordem dos Providers (@Order)](docs/img/05-order-providers.png)
+
+![Criação de Cliente (POST /clientes)](docs/img/06-cliente-create.png)
+
+![Busca de Cliente (GET /clientes/{id})](docs/img/07-cliente-get.png)
+
+![H2 – Tabela CLIENTE](docs/img/08-h2-cliente.png)
 
 
 ---
